@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+/* basic css start*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main-site{
+    background-color: #1c2135;
+    min-height: 93.2vh;
+}
+
+.gif-container{
+    width: calc(200px * 4 + 3em);
+    margin: auto;
+}
+
+:root {
+    --modal-duration: 1s;
+    --modal-color: #1c2135;
+}
+  
+/* basic css end*/
+
+
+/* about start */
+
+.modal-about {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: -100px;
+    top: 0;
+    height: 150%;
+    width: 120%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-about {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header-about h2 {
+    margin: 0;
+}
+
+.modal-header-about {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body-about {
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.close-about {
+    float: right;
+    font-size: 30px;
+}
+
+.close-about:hover,
+.close-about:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* about end */
+
+
+/* contact start */
+
+.modal-contact {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: -100px;
+    top: 0;
+    height: 150%;
+    width: 120%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-contact {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header-contact h2 {
+    margin: 0;
+}
+
+.modal-header-contact {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body-contact {
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.close-contact {
+    float: right;
+    font-size: 30px;
+}
+
+.close-contact:hover,
+.close-contact:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* about end */
+
+
+/* navbar start */
+
+.header-area .main-menu .navbar{
+    border: none;
+}
+
+.header-area .main-menu .navbar .navbar-brand{
+    padding: 0 2rem 0 5rem;
+}
+
+.header-area .main-menu .navbar .navbar-nav a{
+    padding: 0 5rem 0 0;
+}
+
+/* navbar end */
+
+/* searchbar start */
+
+.search-bar{
+    display: flex;
+    justify-content:center;
+    padding-top: 3rem;
+}
+
+.search-button{
+    height:fit-content;
+}
+
+.form-control{
+    width:75vw;
+}
+
+/* searchbar end */
+
+
+/* display-gif start */
+
+.display-gif{
+    padding-top: 5rem;
+    columns: 4;
+    column-gap: 1em;
+}
+
+.item{
+    margin-bottom: 1em;
+}
+
+/* display-gif end */
+
+
+/* media queries */
+@media only screen and (max-width: 880px){
+    .gif-container{
+        width: calc(200px * 2);
+        margin: auto;
+    }
+
+    .display-gif{
+        columns: 2;
+    }
+
+    .modal-about {
+        left: -25px;
+    }
+
+    .modal-contact {
+        left: -25px;
+    }
+    
+}
+
+@media only screen and (max-width: 400px){
+    .gif-container{
+        width: calc(200px * 1);
+        margin: auto;
+    }
+
+    .display-gif{
+        columns: 1;
+    }
+
+    .modal-about {
+        left: -25px;
+    }
+
+    .modal-contact {
+        left: -25px;
+    }
+    
+}
