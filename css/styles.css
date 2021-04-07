@@ -10,7 +10,7 @@
 }
 
 .main-site{
-    background-color: #1c2135;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     min-height: 93.2vh;
 }
 
